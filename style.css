@@ -1,0 +1,94 @@
+:root {
+  --grey: #1f1f1f;
+  --grey2: #2a2a2a;
+  --venice: #075985;
+  --white: #ffffff;
+  --green: #16a34a;
+  --yellow: #facc15;
+  --red: #ef4444;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: var(--grey);
+  color: var(--white);
+}
+
+/* HEADER */
+header {
+  background: var(--venice);
+  text-align: center;
+  padding: 18px;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* CARDS */
+.card {
+  background: var(--grey2);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border-left: 4px solid var(--venice);
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: white;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.full { width: 100%; }
+
+.blue { background: var(--venice); color: white; }
+.green { background: var(--green); color: white; }
+.red { background: var(--red); color: white; }
+
+/* USAGE BOX */
+.usageBox {
+  background: #111;
+  padding: 10px;
+  border-radius: 6px;
+  border-left: 4px solid var(--yellow);
+}
+
+/* HISTORY */
+.historyItem {
+  background: #111;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 6px;
+  border-left: 4px solid var(--yellow);
+}
+
+/* HIDDEN */
+.hidden {
+  display: none;
+}
+
+/* MESSAGE */
+#msg {
+  color: var(--yellow);
+  font-size: 13px;
+}

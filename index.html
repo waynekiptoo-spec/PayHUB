@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PayHub - Smart Meter System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>⚡ PayHub </h1>
+</header>
+
+<div class="container">
+
+  <!-- LOGIN -->
+  <div id="authCard" class="card">
+    <h2>Login to Your Meter</h2>
+
+    <input type="text" id="phone" placeholder="Phone Number (required)">
+    <input type="text" id="meter" placeholder="Meter Number (required)">
+    <input type="email" id="email" placeholder="Email (optional)">
+
+    <button class="btn blue full" onclick="login()">Login</button>
+
+    <p id="msg"></p>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" class="hidden">
+
+    <div class="card">
+      <h2>Welcome</h2>
+      <p><strong>Phone:</strong> <span id="userPhone"></span></p>
+      <p><strong>Meter:</strong> <span id="userMeter"></span></p>
+    </div>
+
+    <!-- USAGE MONITOR -->
+    <div class="card">
+      <h3>⚡ Usage Monitor</h3>
+
+      <div class="usageBox">
+        <p>Units Consumed: <span id="units">0</span> kWh</p>
+        <p>Remaining Balance: <span id="balance">100</span> kWh</p>
+      </div>
+
+      <button class="btn green full" onclick="simulateUsage()">
+        Simulate Usage (-5 kWh)
+      </button>
+    </div>
+
+    <!-- TOKEN PURCHASE -->
+    <div class="card">
+      <h3>Buy Electricity Token</h3>
+
+      <input type="number" id="amount" placeholder="Enter KES amount">
+
+      <button class="btn blue full" onclick="buyToken()">
+        Generate Token
+      </button>
+    </div>
+
+    <!-- HISTORY -->
+    <div class="card">
+      <h3>Transaction History</h3>
+      <div id="history"></div>
+    </div>
+
+    <button class="btn red full" onclick="logout()">Logout</button>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html> 
