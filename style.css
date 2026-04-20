@@ -1,41 +1,46 @@
 :root {
-  --grey: #1f1f1f;
-  --grey2: #2a2a2a;
-  --venice: #075985;
-  --white: #ffffff;
+  --bg: #1f1f1f;
+  --card: #2a2a2a;
+  --blue: #075985;
   --green: #16a34a;
-  --yellow: #facc15;
   --red: #ef4444;
+  --yellow: #facc15;
+  --white: #fff;
 }
 
 body {
   margin: 0;
   font-family: Arial;
-  background: var(--grey);
+  background: var(--bg);
   color: var(--white);
 }
 
 /* HEADER */
 header {
-  background: var(--venice);
-  text-align: center;
+  background: var(--blue);
   padding: 18px;
+  text-align: center;
 }
 
 /* CONTAINER */
 .container {
-  max-width: 600px;
+  max-width: 650px;
   margin: auto;
   padding: 20px;
 }
 
 /* CARDS */
 .card {
-  background: var(--grey2);
+  background: var(--card);
   padding: 15px;
-  border-radius: 12px;
   margin-bottom: 15px;
-  border-left: 4px solid var(--venice);
+  border-radius: 10px;
+  border-left: 4px solid var(--blue);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
 }
 
 /* INPUTS */
@@ -45,8 +50,13 @@ input {
   margin: 8px 0;
   background: #111;
   border: 1px solid #444;
-  border-radius: 6px;
   color: white;
+  border-radius: 6px;
+}
+
+input:focus {
+  border: 1px solid var(--blue);
+  outline: none;
 }
 
 /* BUTTONS */
@@ -56,21 +66,17 @@ input {
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 8px;
 }
 
 .full { width: 100%; }
 
-.blue { background: var(--venice); color: white; }
+.blue { background: var(--blue); color: white; }
 .green { background: var(--green); color: white; }
 .red { background: var(--red); color: white; }
+.yellow { background: var(--yellow); color: black; }
 
-/* USAGE BOX */
-.usageBox {
-  background: #111;
-  padding: 10px;
-  border-radius: 6px;
-  border-left: 4px solid var(--yellow);
+.btn:hover {
+  opacity: 0.85;
 }
 
 /* HISTORY */
@@ -78,8 +84,8 @@ input {
   background: #111;
   padding: 10px;
   margin: 6px 0;
-  border-radius: 6px;
   border-left: 4px solid var(--yellow);
+  border-radius: 6px;
 }
 
 /* HIDDEN */
@@ -90,5 +96,4 @@ input {
 /* MESSAGE */
 #msg {
   color: var(--yellow);
-  font-size: 13px;
 }
