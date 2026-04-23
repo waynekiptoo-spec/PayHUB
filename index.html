@@ -2,79 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PayHub Smart Meter</title>
+  <title>Smart Dictionary App</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <h1>⚡ PayHub Smart Meter System</h1>
-</header>
-
 <div class="container">
+  <h1>📘 Dictionary App</h1>
 
-  <!-- LOGIN -->
-  <div id="authCard" class="card">
-    <h2>Login</h2>
+  <form id="searchForm">
+    <input type="text" id="wordInput" placeholder="Search a word..." required>
+    <button type="submit">Search</button>
+  </form>
 
-    <input type="text" id="phone" placeholder="Phone Number">
-    <input type="text" id="meter" placeholder="Meter Number">
-    <input type="email" id="email" placeholder="Email (optional)">
-
-    <button id="loginBtn" class="btn blue full">Login</button>
-
-    <p id="msg"></p>
-  </div>
-
-  <!-- DASHBOARD -->
-  <div id="dashboard" class="hidden">
-
-    <div class="card">
-      <h2>User Info</h2>
-      <p>Phone: <span id="userPhone"></span></p>
-      <p>Meter: <span id="userMeter"></span></p>
-    </div>
-
-    <!-- SEARCH (IMPORTANT FOR RUBRIC) -->
-    <div class="card">
-      <h3>🔍 Search Transactions</h3>
-      <input type="text" id="search" placeholder="Search history...">
-      <button id="searchBtn" class="btn yellow full">Search</button>
-    </div>
-
-    <!-- USAGE -->
-    <div class="card">
-      <h3>⚡ Usage Monitor</h3>
-
-      <p>Units: <span id="units">0</span> kWh</p>
-      <p>Balance: <span id="balance">100</span> kWh</p>
-
-      <button id="usageBtn" class="btn green full">
-        Simulate Usage (-5 kWh)
-      </button>
-    </div>
-
-    <!-- TOKEN -->
-    <div class="card">
-      <h3>Buy Token</h3>
-
-      <input type="number" id="amount" placeholder="Enter KES">
-
-      <button id="buyBtn" class="btn blue full">
-        Generate Token
-      </button>
-    </div>
-
-    <!-- HISTORY -->
-    <div class="card">
-      <h3>History</h3>
-      <div id="history"></div>
-    </div>
-
-    <button id="logoutBtn" class="btn red full">Logout</button>
-
-  </div>
-
+  <div id="result"></div>
 </div>
 
 <script src="script.js"></script>
